@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
+    <!-- Charset & Title -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Petits Plats</title>
-</head>
-<body>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/28350a576b.js" crossorigin="anonymous" defer></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/assets/style/css/dist/main.min.css"/>
+
+    <!-- Javascript -->
+    <script type="module" src="../assets/javascript/index.js"></script>
+
+    <!-- Icons -->
+
+    <!-- SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- OpenGraph MetaTags -->
+
+    <!-- Twitter MetaTags -->
+  </head>
     
-</body>
+  <body>
+    <header>
+      <figure>
+        <img src="/assets/media/logo/toque.svg" alt="">
+        <figcaption>
+          <h1>Les petits plats</h1>
+        </figcaption>
+      </figure>
+
+      <nav>
+        <input type="text">
+
+        <div id="filters"></div>
+
+        <label for="ingredient-select">Ingredients</label>
+        <select name="ingredients" id="ingredient-select">
+          <option value=""></option>
+        </select>
+        
+        <label for="device-select">Appareil</label>
+        <select name="devices" id="device-select">
+          <option value=""></option>
+        </select>
+        
+        <label for="utensil-select">Ustensiles</label>
+        <select name="utensils" id="utensil-select">
+          <option value=""></option>
+        </select>
+      </nav>
+    </header>
+
+    <main id="main">
+
+    </main>
+  </body>
 </html>
