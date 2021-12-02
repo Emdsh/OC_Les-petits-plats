@@ -1,0 +1,11 @@
+@use './variables' as *;
+
+@function color($name, $shade: base, $degree: '') {
+  $color: map-get(map-get($colors, $name), $shade);
+
+  @if $degree != '' {
+    $color: map-get(map-get(map-get($colors, $name), $shade), $degree);
+  }
+
+  @return $color;
+}

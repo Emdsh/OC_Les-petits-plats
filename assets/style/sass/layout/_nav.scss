@@ -1,0 +1,70 @@
+@use '../layout/' as *;
+
+.nav {
+  margin: 2rem 5vw 0 5vw;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__search-bar {
+    &::after {
+      font-family: 'Font Awesome 6 Free';
+      content: '\f002';
+      color: color(dark);
+      background: color(light, darker, first);
+      position: absolute;
+      right: .5rem;
+      top: .35rem;
+      font-size: 2rem;
+    }
+
+    &-input {
+      width: 90vw;
+      height: 3rem;
+      padding: 1rem;
+      background: color(light, darker, first);
+      border-radius: .25rem;
+      position: relative;
+    }
+  }
+}
+
+.selectors {
+  &__item {
+    margin: .5rem 1rem 0 0;
+    padding: 1rem;
+    border-radius: .25rem;
+    color: color(light);
+    width: 8rem;
+
+    &::placeholder {
+      color: color(light);
+      opacity: 1;
+    }
+
+    &-arrow {
+      position: relative;
+
+      &::after {
+        font-family: 'Font Awesome 6 Free';
+        content: '\f107';
+        color: color(dark);
+        position: absolute;
+        right: .5rem;
+        top: .35rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__ingredients {
+    background: color(_highlight, base, first);
+  }
+
+  &__devices {
+    background: color(_highlight, base, second);
+  }
+
+  &__utensils {
+    background: color(_highlight, base, third);
+  }
+}

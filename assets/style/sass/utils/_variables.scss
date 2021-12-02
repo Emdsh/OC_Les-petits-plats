@@ -1,0 +1,29 @@
+$color-primary: #d04f4f;
+$color-first-highlight: #3282f7;
+$color-second-highlight: #68d9a4;
+$color-third-highlight: #ed6454;
+$color-light: #fff;
+$color-dark: #000;
+
+$colors: (
+  primary: (
+    base: $color-primary,
+  ),
+  _highlight: (
+    base: (
+      first: $color-first-highlight,
+      second: $color-second-highlight,
+      third: $color-third-highlight,
+    ),
+  ),
+  light: (
+    base: $color-light,
+    darker: (
+      first: darken($color-light, 9),
+      second: darken($color-light, 24),
+    ),
+  ),
+  dark: (
+    base: $color-dark,
+  ),
+)

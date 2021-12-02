@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/assets/style/css/dist/main.min.css"/>
 
     <!-- Javascript -->
-    <script type="module" src="../assets/javascript/index.js"></script>
+    <!-- <script type="module" src="../assets/javascript/index.js"></script> -->
 
     <!-- Icons -->
 
@@ -31,32 +31,53 @@
     
   <body>
     <header>
-      <figure>
-        <img src="/assets/media/logo/toque.svg" alt="">
-        <figcaption>
-          <h1>Les petits plats</h1>
-        </figcaption>
-      </figure>
+      <div class="header">
+        <a href="index.html">
+          <figure class="header__container">
+            <img src="/assets/media/logo/toque.svg" alt="" class="header__logo">
+            <figcaption>
+              <h1 class="header__title">Les petits plats</h1>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
 
-      <nav>
-        <input type="text">
+      <nav class="nav">
+        <form>
+          <span class="nav__search-bar">
+            <input type="text" class="nav__search-bar-input" placeholder="Rechercher un ingrédient, appareil, unstensiles ou une recette">
+          </span>
 
-        <div id="filters"></div>
+          <div id="filters"></div>
 
-        <label for="ingredient-select">Ingredients</label>
-        <select name="ingredients" id="ingredient-select">
-          <option value=""></option>
-        </select>
-        
-        <label for="device-select">Appareil</label>
-        <select name="devices" id="device-select">
-          <option value=""></option>
-        </select>
-        
-        <label for="utensil-select">Ustensiles</label>
-        <select name="utensils" id="utensil-select">
-          <option value=""></option>
-        </select>
+          <div class="selectors">
+            <!-- <label for="ingredient-select">Ingredients</label> -->
+            <span class="selector__item-arrow">
+              <input name="ingredients" list="ingredients-list" id="ingredient-select" placeholder="Ingredients" class="selectors__item selectors__ingredients">
+            </span>
+            
+            <datalist id="ingredients-list">
+              <option value=""></option>
+            </datalist>
+          
+            <!-- <label for="device-select">Appareil</label> -->
+            <span class="selector__item-arrow">
+              <input name="devices" list="devices-list" id="device-select" placeholder="Appareil" class="selectors__item selectors__devices">
+            </span>
+            <datalist id="devices-list">
+              <option value=""></option>
+            </datalist>
+          
+            <!-- <label for="utensil-select">Ustensiles</label> -->
+            <span class="selector__item-arrow">
+              <input name="utensils" list="utensils-list" id="utensil-select" placeholder="Ustensiles" class="selectors__item selectors__utensils">
+            </span>
+            
+            <datalist id="utensils-list">
+              <option value=""></option>
+            </datalist>
+          </div>
+        </form>
       </nav>
     </header>
 

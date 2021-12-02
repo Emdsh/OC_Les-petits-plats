@@ -1,0 +1,22 @@
+@use '../layout/' as *;
+
+.header {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__logo {
+    height: 3rem;
+  }
+
+  &__title {
+    height: 2rem;
+    color: color(primary);
+  }
+}
