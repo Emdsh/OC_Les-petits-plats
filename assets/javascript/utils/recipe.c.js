@@ -33,10 +33,10 @@ export class Recipe {
     this._ingredients.forEach(i => {
       if (i.quantity) {
         if (i.unit) {
-          ingredientsArray.push(`${i.ingredient}: ${i.quantity} ${i.unit}`);
+          ingredientsArray.push(`${i.ingredient}: <span class="recipe-tile__text-ingredients--light">${i.quantity} ${i.unit}</span>`);
         }
         else {
-          ingredientsArray.push(`${i.ingredient}: ${i.quantity}`);
+          ingredientsArray.push(`${i.ingredient}: <span class="recipe-tile__text-ingredients--light">${i.quantity}</span>`);
         }
       }
       else {

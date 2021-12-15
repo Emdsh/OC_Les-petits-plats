@@ -43,6 +43,63 @@ fieldset {
   font-family: "DM Sans", sans-serif;
 }
 
+.recipe-tile {
+  max-width: 25vw;
+  background: #e8e8e8;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.recipe-tile__img {
+  width: 100%;
+  height: 10rem;
+  background: #c2c2c2;
+}
+.recipe-tile__text {
+  height: 10rem;
+  overflow: hidden;
+  background: #e8e8e8;
+  padding: 0 1rem;
+}
+.recipe-tile__text-title {
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 85%;
+}
+.recipe-tile__text-ingredients {
+  max-width: 50%;
+  font-size: 0.66rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 8;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+.recipe-tile__text-ingredients--light {
+  font-weight: 500;
+}
+.recipe-tile__text-description {
+  max-width: 50%;
+  font-size: 0.66rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 8;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+.recipe-tile__text-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
 .header {
   padding-top: 2rem;
   display: flex;
@@ -124,4 +181,12 @@ fieldset {
 }
 .selectors__utensils {
   background: #ed6454;
+}
+
+.main {
+  margin: 2rem 5vw 0 5vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 5vw;
 }

@@ -8,19 +8,19 @@ function generateHomepage(recipes) {
       ingredientsList.push(`<li>${ingredient}</li>`);
     });
 
-    const recipeTile = `<article>
+    const recipeTile = `<article class="recipe-tile">
                           <figure>
-                            <img>
-                            <figcaption>
-                              <div>
-                                <h2>${recipe.name}</h2>
-                                <p>${recipe.time}</p>
+                            <img class="recipe-tile__img">
+                            <figcaption class="recipe-tile__text">
+                              <div class="recipe-tile__text-flex">
+                                <h2 class="recipe-tile__text-title">${recipe.name}</h2>
+                                <p class="recipe-tile__text-time">${recipe.time}</p>
                               </div>
-                              <div>
-                                <ul>
-                                  ${ingredientsList.join(``)}
+                              <div class="recipe-tile__text-flex">
+                                <ul class="recipe-tile__text-ingredients">
+                                  ${ingredientsList.join('')}
                                 </ul>
-                                <p>${recipe.description}</p>
+                                <p class="recipe-tile__text-description">${recipe.description}</p>
                               </div>
                             </figcaption>
                           </figure>
