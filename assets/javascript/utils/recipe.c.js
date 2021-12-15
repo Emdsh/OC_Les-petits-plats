@@ -21,6 +21,16 @@ export class Recipe {
     const ingredientsArray = [];
 
     this._ingredients.forEach(i => {
+      ingredientsArray.push(i.ingredient);
+    });
+    
+    return ingredientsArray;
+  }
+
+  get ingredientsQuantity() {
+    const ingredientsArray = [];
+
+    this._ingredients.forEach(i => {
       if (i.quantity) {
         if (i.unit) {
           ingredientsArray.push(`${i.ingredient}: ${i.quantity} ${i.unit}`);

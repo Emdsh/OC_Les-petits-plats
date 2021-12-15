@@ -4,7 +4,7 @@ function generateHomepage(recipes) {
   recipes.forEach(recipe => {
     const ingredientsList = [];
 
-    recipe.ingredients.forEach(ingredient => {
+    recipe.ingredientsQuantity.forEach(ingredient => {
       ingredientsList.push(`<li>${ingredient}</li>`);
     });
 
