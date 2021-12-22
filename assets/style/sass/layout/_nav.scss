@@ -7,7 +7,7 @@
 
   &__search-bar {
     &::after {
-      font-family: 'Font Awesome 6 Free';
+      font-family: 'Font Awesome 5 Free';
       content: '\f002';
       color: color(dark);
       background: color(light, darker, first);
@@ -45,7 +45,7 @@
       position: relative;
 
       &::after {
-        font-family: 'Font Awesome 6 Free';
+        font-family: 'Font Awesome 5 Free';
         content: '\f107';
         color: color(dark);
         position: absolute;

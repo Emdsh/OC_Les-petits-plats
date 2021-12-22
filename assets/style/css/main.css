@@ -68,6 +68,11 @@ fieldset {
   text-overflow: ellipsis;
   max-width: 85%;
 }
+.recipe-tile__text-time::before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  margin-right: 0.25rem;
+}
 .recipe-tile__text-ingredients {
   max-width: 50%;
   font-size: 0.66rem;
@@ -124,7 +129,7 @@ fieldset {
   flex-flow: column nowrap;
 }
 .nav__search-bar::after {
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 5 Free";
   content: "";
   color: #000;
   background: #e8e8e8;
@@ -165,7 +170,7 @@ fieldset {
   position: relative;
 }
 .selectors__item-arrow::after {
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 5 Free";
   content: "";
   color: #000;
   position: absolute;
