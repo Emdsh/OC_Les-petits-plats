@@ -127,12 +127,14 @@ fieldset {
 .nav__search-bar::after {
   font-family: "Font Awesome 5 Free";
   content: "";
+  font-weight: 900;
   color: #000;
   background: #e8e8e8;
   position: absolute;
   right: 0.5rem;
   top: 0.35rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 0.25rem 0;
 }
 .nav__search-bar-input {
   width: 90vw;
@@ -168,11 +170,13 @@ fieldset {
 .selectors__item-arrow::after {
   font-family: "Font Awesome 5 Free";
   content: "";
+  font-weight: 900;
   color: #000;
   position: absolute;
-  right: 0.5rem;
-  top: 0.35rem;
-  font-size: 2rem;
+  right: 2rem;
+  top: 0.25rem;
+  font-size: 1rem;
+  color: #fff;
 }
 .selectors__ingredients {
   background: #3282f7;

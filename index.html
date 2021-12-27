@@ -17,10 +17,7 @@
     <link rel="stylesheet" href="/assets/style/css/dist/main.min.css"/>
 
     <!-- Handlebars -->
-    <!-- !vulnerability-free -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <!-- !vulnerable -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.5.3/handlebars.min.js" integrity="sha512-IOSIuOdCxxe169v15oZqegdNlUGzC+e2trxQIyucTS4GQHOONJbVgCreEeuM/EruJHmbskEFAoRDM2VU+50rmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/x-handlebars-template" id="recipe-tile-template">
       {{#each this as |recipe|}}
@@ -81,24 +78,21 @@
           <div id="filters"></div>
 
           <div class="selectors">
-            <!-- <label for="ingredient-select">Ingredients</label> -->
-            <span class="selector__item-arrow">
+            <span class="selectors__item-arrow">
               <input name="ingredients" list="ingredients-list" id="ingredient-select" placeholder="Ingredients" class="selectors__item selectors__ingredients">
             </span>
             
             <datalist id="ingredients-list">
             </datalist>
-          
-            <!-- <label for="appliance-select">Appareil</label> -->
-            <span class="selector__item-arrow">
+
+            <span class="selectors__item-arrow">
               <input name="appliances" list="appliances-list" id="appliance-select" placeholder="Appareil" class="selectors__item selectors__appliances">
             </span>
 
             <datalist id="appliances-list">
             </datalist>
           
-            <!-- <label for="utensil-select">Ustensiles</label> -->
-            <span class="selector__item-arrow">
+            <span class="selectors__item-arrow">
               <input name="utensils" list="utensils-list" id="utensil-select" placeholder="Ustensiles" class="selectors__item selectors__utensils">
             </span>
             
