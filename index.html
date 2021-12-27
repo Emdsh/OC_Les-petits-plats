@@ -19,30 +19,6 @@
     <!-- Handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script type="text/x-handlebars-template" id="recipe-tile-template">
-      {{#each this as |recipe|}}
-        <article class="recipe-tile">
-          <figure>
-            <img class="recipe-tile__img">
-            <figcaption class="recipe-tile__text">
-              <div class="recipe-tile__text-flex">
-                <h2 class="recipe-tile__text-title">{{recipe.name}}</h2>
-                <p class="recipe-tile__text-time">{{recipe.time}}</p>
-              </div>
-              <div class="recipe-tile__text-flex">
-                <ul class="recipe-tile__text-ingredients">
-                  {{#each recipe.ingredientsQuantity as |ingredient|}}
-                    <li>{{{ingredient}}}</li>
-                  {{/each}}
-                </ul>
-                <p class="recipe-tile__text-description">{{recipe.description}}</p>
-              </div>
-            </figcaption>
-          </figure>
-        </article>
-      {{/each}}
-    </script>
-
     <!-- Javascript -->
     <script type="module" src="../assets/javascript/index.js"></script>
 
@@ -72,7 +48,7 @@
       <nav class="nav">
         <form>
           <span class="nav__search-bar">
-            <input type="text" class="nav__search-bar-input" placeholder="Rechercher un ingrédient, appareil, unstensiles ou une recette">
+            <input type="text" class="nav__search-bar-input" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
           </span>
 
           <div id="filters"></div>

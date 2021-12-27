@@ -1,19 +1,18 @@
-function generateHomepage(recipes) {
-
-  //TODO use the .hbs file instead, how?
-  const template = Handlebars.compile(document.getElementById('recipe-tile-template').innerHTML);
-
-  const filled = template(recipes, {
-    allowedProtoProperties: {
-      name: true,
-      time: true,
-      ingredientsQuantity: true,
-      description: true
-    }
-  });
-  
+function generateHomepage(recipes) {  
   const main = document.getElementById('main');
-  main.insertAdjacentHTML('beforeend', filled);
+
+  fetch('assets/javascript/handlebars/recipeTile.hbs')
+    .then(response => response.text())
+    .then(text => Handlebars.compile(text))
+    .then(fn => fn(recipes, {
+      allowedProtoProperties: {
+        name: true,
+        time: true,
+        ingredientsQuantity: true,
+        description: true
+      }
+    }))
+    .then(html => main.insertAdjacentHTML('beforeend', html));
 }
 
 export default generateHomepage;
