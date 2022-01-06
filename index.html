@@ -51,29 +51,35 @@
             <input type="text" class="nav__search-bar-input" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
           </span>
 
-          <div id="filters"></div>
+          <div id="filters" class="filters"></div>
 
           <div class="selectors">
-            <span class="selectors__item-arrow">
-              <input name="ingredients" list="ingredients-list" id="ingredient-select" placeholder="Ingredients" class="selectors__item selectors__ingredients">
-            </span>
-            
-            <datalist id="ingredients-list">
-            </datalist>
+            <span class="selectors__item-arrow selectors__container">
+              <label for="ingredient-select" class="selectors__label">Ingredients</label>
+              <!-- <input name="ingredients" list="ingredients-list" id="ingredient-select" placeholder="Ingredients" class="selectors__item selectors__ingredients"> -->
+              <input name="ingredients" list="" id="ingredient-select" placeholder="Recherche un ingredient" class="selectors__item selectors__ingredients">
 
-            <span class="selectors__item-arrow">
-              <input name="appliances" list="appliances-list" id="appliance-select" placeholder="Appareil" class="selectors__item selectors__appliances">
+              <datalist id="ingredients-list" class="datalist datalist__ingredients">
+              </datalist>
             </span>
 
-            <datalist id="appliances-list">
-            </datalist>
+            <span class="selectors__item-arrow selectors__container">
+              <label for="appliance-select" class="selectors__label">Appareil</label>
+              <!-- <input name="appliances" list="appliances-list" id="appliance-select" placeholder="Recherche un appareil" class="selectors__item selectors__appliances"> -->
+              <input name="appliances" list="" id="appliance-select" placeholder="Recherche un appareil" class="selectors__item selectors__appliances">
+
+              <datalist id="appliances-list" class="datalist datalist__appliances">
+              </datalist>
+            </span>
           
-            <span class="selectors__item-arrow">
-              <input name="utensils" list="utensils-list" id="utensil-select" placeholder="Ustensiles" class="selectors__item selectors__utensils">
+            <span class="selectors__item-arrow selectors__container">
+              <label for="utensil-select" class="selectors__label">Ustensiles</label>
+              <!-- <input name="utensils" list="utensils-list" id="utensil-select" placeholder="Recherche un ustensile" class="selectors__item selectors__utensils"> -->
+              <input name="utensils" list="" id="utensil-select" placeholder="Recherche un ustensile" class="selectors__item selectors__utensils">
+
+              <datalist id="utensils-list" class="datalist datalist__utensils">
+              </datalist>
             </span>
-            
-            <datalist id="utensils-list">
-            </datalist>
           </div>
         </form>
       </nav>

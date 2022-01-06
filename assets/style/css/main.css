@@ -66,7 +66,10 @@ fieldset {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: 85%;
+  max-width: 75%;
+}
+.recipe-tile__text-time {
+  max-width: 25%;
 }
 .recipe-tile__text-time::before {
   font-family: "Font Awesome 5 Free";
@@ -135,6 +138,7 @@ fieldset {
   top: 0.35rem;
   font-size: 1.5rem;
   padding: 0.25rem 0;
+  cursor: pointer;
 }
 .nav__search-bar-input {
   width: 90vw;
@@ -143,26 +147,69 @@ fieldset {
   background: #e8e8e8;
   border-radius: 0.25rem;
   position: relative;
+  font-size: 1rem;
+}
+.nav__search-bar::-moz-placeholder {
+  font-size: 1rem;
+}
+.nav__search-bar:-ms-input-placeholder {
+  font-size: 1rem;
+}
+.nav__search-bar::placeholder {
+  font-size: 1rem;
 }
 
+.selectors__label {
+  position: absolute;
+  color: #fff;
+  font-size: 1rem;
+  left: 1rem;
+  top: 0.1rem;
+}
+.selectors__container {
+  position: relative;
+}
+.selectors__container:focus-within .selectors__label {
+  opacity: 0;
+}
 .selectors__item {
   margin: 0.5rem 1rem 0 0;
   padding: 1rem;
   border-radius: 0.25rem;
   color: #fff;
-  width: 8rem;
+  width: 10rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.selectors__item:focus-within {
+  width: 42vw;
+  border-radius: 0.25rem 0.25rem 0 0;
+  cursor: unset;
+  outline: none;
+}
+.selectors__item:focus-within::-moz-placeholder {
+  opacity: 0.5;
+}
+.selectors__item:focus-within:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.selectors__item:focus-within::placeholder {
+  opacity: 0.5;
 }
 .selectors__item::-moz-placeholder {
   color: #fff;
-  opacity: 1;
+  font-size: 1rem;
+  opacity: 0;
 }
 .selectors__item:-ms-input-placeholder {
   color: #fff;
-  opacity: 1;
+  font-size: 1rem;
+  opacity: 0;
 }
 .selectors__item::placeholder {
   color: #fff;
-  opacity: 1;
+  font-size: 1rem;
+  opacity: 0;
 }
 .selectors__item-arrow {
   position: relative;
@@ -171,12 +218,12 @@ fieldset {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
-  color: #000;
   position: absolute;
   right: 2rem;
   top: 0.25rem;
   font-size: 1rem;
   color: #fff;
+  pointer-events: none;
 }
 .selectors__ingredients {
   background: #3282f7;
@@ -185,6 +232,79 @@ fieldset {
   background: #68d9a4;
 }
 .selectors__utensils {
+  background: #ed6454;
+}
+
+.datalist {
+  position: absolute;
+  left: 0;
+  border-radius: 0 0 0.25rem 0.25rem;
+  width: 42vw;
+  padding: 0.25rem;
+  display: none;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.datalist__ingredients {
+  background: #3282f7;
+}
+.datalist__appliances {
+  background: #68d9a4;
+}
+.datalist__utensils {
+  background: #ed6454;
+}
+.datalist::after {
+  content: "";
+  flex: 1 1 33%;
+}
+.datalist option {
+  background: inherit;
+  padding: 0.25rem;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+  width: 14vw;
+  flex: 1 0 33%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.datalist option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.filters {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+.filters__item {
+  font-size: 0.75rem;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.filters__item::after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  margin-left: 0.5rem;
+}
+.filters__item--ingredient {
+  background: #3282f7;
+}
+.filters__item--appliance {
+  background: #68d9a4;
+}
+.filters__item--utensil {
   background: #ed6454;
 }
 

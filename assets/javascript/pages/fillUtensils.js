@@ -8,7 +8,7 @@ function fillUtensils(recipes) {
 
   const sortUtensils = Array.from(utensilsSet).sort((a, b) => a.localeCompare(b));
 
-  const utensilsList = sortUtensils.map(utensil => `<option value="${utensil}">${utensil}</option>`);
+  const utensilsList = sortUtensils.map(utensil => `<option value="${utensil}" class="utensil">${utensil}</option>`);
 
   const utensilsDatalist = document.getElementById('utensils-list');
   utensilsDatalist.insertAdjacentHTML('beforeend', utensilsList.join(''));

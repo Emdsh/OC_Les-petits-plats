@@ -17,6 +17,7 @@
       top: .35rem;
       font-size: 1.5rem;
       padding: .25rem 0;
+      cursor: pointer;
     }
 
     &-input {
@@ -26,21 +27,58 @@
       background: color(light, darker, first);
       border-radius: .25rem;
       position: relative;
+      font-size: 1rem;
+    }
+
+    &::placeholder {
+      font-size: 1rem;
     }
   }
 }
 
 .selectors {
+  &__label {
+    position: absolute;
+    color: color(light);
+    font-size: 1rem;
+    left: 1rem;
+    top: .1rem;
+  }
+
+  &__container {
+    position: relative;
+
+    &:focus-within {
+      & .selectors__label {
+        opacity: 0;
+      }
+    }
+  }
+
   &__item {
     margin: .5rem 1rem 0 0;
     padding: 1rem;
     border-radius: .25rem;
     color: color(light);
-    width: 8rem;
+    width: 10rem;
+    font-size: 1rem;
+    cursor: pointer;
+    
+    &:focus-within {
+      width: 42vw;
+      border-radius: .25rem .25rem 0 0;
+      cursor: unset;
+      outline: none;
+
+      &::placeholder {
+        opacity: .5;
+      }
+    }
 
     &::placeholder {
       color: color(light);
-      opacity: 1;
+      font-size: 1rem;
+      opacity: 0;
     }
 
     &-arrow {
@@ -50,12 +88,12 @@
         font-family: 'Font Awesome 5 Free';
         content: '\f107';
         font-weight: 900;
-        color: color(dark);
         position: absolute;
         right: 2rem;
         top: .25rem;
         font-size: 1rem;
         color: color(light);
+        pointer-events: none;
       }
     }
   }
@@ -70,5 +108,87 @@
 
   &__utensils {
     background: color(_highlight, base, third);
+  }
+}
+
+.datalist {
+  position: absolute;
+  left: 0;
+  border-radius: 0 0 .25rem .25rem;
+  width: 42vw;
+  padding: .25rem;
+  display: none;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &__ingredients {
+    background: color(_highlight, base, first);
+  }
+
+  &__appliances {
+    background: color(_highlight, base, second);
+  }
+
+  &__utensils {
+    background: color(_highlight, base, third);
+  }
+
+  &::after {
+    content: '';
+    flex: 1 1 33%;
+  }
+  
+  option {
+    background: inherit;
+    padding: .25rem;
+    color: color(light);
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: .25rem;
+    width: 14vw;
+    flex: 1 0 33%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:hover {
+      background: rgba(color(light), .2);
+    }
+  }
+}
+
+.filters {  
+  display: flex;
+  flex-flow: row wrap;
+  gap: .5rem;
+
+  &__item {
+    font-size: .75rem;
+    color: color(light);
+    text-transform: capitalize;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    margin-top: .5rem;
+    width: fit-content;
+    cursor: pointer;
+
+    &::after {
+      font-family: 'Font Awesome 5 Free';
+      content: '\f057';
+      margin-left: .5rem;
+    }
+
+    &--ingredient {
+      background: color(_highlight, base, first);
+    }
+
+    &--appliance {
+      background: color(_highlight, base, second);
+    }
+  
+    &--utensil {
+      background: color(_highlight, base, third);
+    }
   }
 }

@@ -24,10 +24,11 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      max-width: 85%;
+      max-width: 75%;
     }
 
     &-time {
+      max-width: 25%;
       &::before {
         font-family: 'Font Awesome 5 Free';
         content: '\f017';

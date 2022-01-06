@@ -9,7 +9,7 @@ function fillIngredients(recipes) {
   const sortIngredients = Array.from(ingredientsSet)
     .sort((a, b) => a.localeCompare(b));
 
-  const ingredientsList = sortIngredients.map(ingredient => `<option value="${ingredient}">${ingredient}</option>`);
+  const ingredientsList = sortIngredients.map(ingredient => `<option value="${ingredient}" class="ingredient">${ingredient}</option>`);
 
   const ingredientsDatalist = document.getElementById('ingredients-list');
   ingredientsDatalist.insertAdjacentHTML('beforeend', ingredientsList.join(''));
