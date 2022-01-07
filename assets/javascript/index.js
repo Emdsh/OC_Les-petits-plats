@@ -3,6 +3,7 @@ import addFilter from './filters/addFilter.js';
 import filterDatalist from './filters/filterDatalist.js';
 import showDatalist from './filters/showDatalist.js';
 import fillHomepage from './pages/fillHomepage.js';
+import search from './search/search.js';
 
 const recipes = buildRecipes();
 
@@ -12,4 +13,6 @@ recipes.then(recipes => {
   showDatalist();
   filterDatalist();
   addFilter();
+
+  search();
 });
