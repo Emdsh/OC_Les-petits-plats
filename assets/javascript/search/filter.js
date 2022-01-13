@@ -1,3 +1,5 @@
+import filterFilters from './filterFilters.js';
+
 function filter() {
   const filters = Array.from(document.querySelectorAll('.filters__item')).map(list => list.innerText.toLowerCase());
   const recipes = document.querySelectorAll('.recipe-tile');
@@ -17,6 +19,8 @@ function filter() {
       }
     });
   });
+
+  filterFilters();
 }
 
 export default filter;

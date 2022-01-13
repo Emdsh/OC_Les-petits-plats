@@ -1,3 +1,5 @@
+import filterFilters from './filterFilters.js';
+
 function search() {
   const searchBar = document.getElementById('search-bar');
 
@@ -17,6 +19,8 @@ function search() {
         console.log(recipe.innerText);
       }
     });
+
+    filterFilters();
   });
 }
 
