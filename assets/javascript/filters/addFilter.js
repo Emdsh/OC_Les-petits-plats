@@ -1,3 +1,4 @@
+import filter from '../search/filter.js';
 import removeFilter from './removeFilter.js';
 
 function addItem() {
@@ -5,6 +6,7 @@ function addItem() {
   const filterCategory = this.classList[0];
   filters.insertAdjacentHTML('beforeend', `<span class="filters__item filters__item--${filterCategory}">${this.value}</span>`);
   this.remove();
+  filter();
   removeFilter();
 }
 

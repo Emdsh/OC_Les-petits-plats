@@ -1,3 +1,4 @@
+import filter from '../search/filter.js';
 import addFilter from './addFilter.js';
 
 function removeItem() {
@@ -6,6 +7,7 @@ function removeItem() {
   datalist.insertAdjacentHTML('beforeend', `<option value="${this.innerText.toLowerCase()}" class="${filterCategory}">${this.innerText.toLowerCase()}</option>`);
   addFilter();
   this.remove();
+  filter();
 }
 
 function removeFilter() {
