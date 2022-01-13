@@ -1,3 +1,5 @@
+import filterFilters from './filterFilters.js';
+
 function search() {
   const searchBar = document.getElementById('search-bar');
 
@@ -9,7 +11,7 @@ function search() {
       for (let g = 0; g < recipes.length; g += 1) {
         recipes[g].style.display = 'block';
       }
-      return;
+    return filterFilters();
     }
     // start filtering once input is at least 3 letters
     // hide all recipes by default
@@ -23,6 +25,8 @@ function search() {
         recipes[m].style.display = 'block';
       }
     }
+
+    filterFilters();
   });
 }
 

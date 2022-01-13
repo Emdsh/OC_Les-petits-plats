@@ -1,3 +1,5 @@
+import filterFilters from './filterFilters.js';
+
 function filter() {
   const filters = Array.from(document.querySelectorAll('.filters__item'));
   const recipes = document.querySelectorAll('.recipe-tile');
@@ -6,7 +8,7 @@ function filter() {
     for (let h = 0; h < recipes.length; h += 1) {
       recipes[h].style.display = 'block';
     }
-    return;
+    return filterFilters();
   }
 
   // hide all recipes by default
@@ -22,6 +24,8 @@ function filter() {
       }
     }
   }
+
+  filterFilters();
 }
 
 export default filter;
