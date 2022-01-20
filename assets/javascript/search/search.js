@@ -1,4 +1,5 @@
 import filterFilters from './filterFilters.js';
+import error from './error.js';
 
 // filter recipes depending on the main search bar input
 function search() {
@@ -24,6 +25,8 @@ function search() {
 
     // filter filters depending on the main search bar input
     filterFilters();
+
+    error();
   });
 }
 
