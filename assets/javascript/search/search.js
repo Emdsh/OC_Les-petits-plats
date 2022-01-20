@@ -1,5 +1,6 @@
 import filterFilters from './filterFilters.js';
 
+// filter recipes depending on the main search bar input
 function search() {
   const searchBar = document.getElementById('search-bar');
 
@@ -26,6 +27,7 @@ function search() {
       }
     }
 
+    // filter filters depending on the main search bar input
     filterFilters();
   });
 }

@@ -1,6 +1,8 @@
+// put recipes in the homepage
 function generateHomepage(recipes) {  
   const main = document.getElementById('main');
 
+  // build every recipe tile with Handlebars
   fetch('assets/javascript/handlebars/recipeTile.hbs')
     .then(response => response.text())
     .then(text => Handlebars.compile(text))

@@ -17,6 +17,7 @@ export class Recipe {
     return this._description;
   }
 
+  // return ingredients
   get ingredients() {
     const ingredientsArray = [];
 
@@ -27,6 +28,7 @@ export class Recipe {
     return ingredientsArray;
   }
 
+  // return ingredients and their quantity
   get ingredientsQuantity() {
     const ingredientsArray = [];
 

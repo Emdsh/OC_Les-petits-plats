@@ -1,4 +1,6 @@
+// fill the utensils datalist
 function fillUtensils(recipes) {
+  // make sure every item in the datalist are unique
   const utensilsSet = new Set();
   recipes.forEach(recipe => {
     recipe.utensils.forEach(utensil => {
@@ -6,7 +8,9 @@ function fillUtensils(recipes) {
     });
   });
 
-  const sortUtensils = Array.from(utensilsSet).sort((a, b) => a.localeCompare(b));
+  // sort items alphabetically
+  const sortUtensils = Array.from(utensilsSet)
+    .sort((a, b) => a.localeCompare(b));
 
   const utensilsList = sortUtensils.map(utensil => `<option value="${utensil}" class="utensil">${utensil}</option>`);
 

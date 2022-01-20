@@ -1,3 +1,4 @@
+// fetch recipes from the API
 async function getRecipes() {
   try {
     const response = await fetch('api/api.json', {

@@ -1,6 +1,8 @@
 import filterFilters from './filterFilters.js';
 
+// filter recipes depending on the selected filters
 function filter() {
+  // get every selected filters
   const filters = Array.from(document.querySelectorAll('.filters__item'));
   const recipes = document.querySelectorAll('.recipe-tile');
 
