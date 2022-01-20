@@ -3,7 +3,7 @@ function filterFilters() {
   // get the recipes that are displayed
   const recipes = document.querySelectorAll('.recipe-tile:not([style*="display: none;"])');
   const filters = document.querySelectorAll('.datalist option');
-  
+
   for (let i = 0; i < filters.length; i += 1) {
     // hide every filter items
     filters[i].style.display = 'none';

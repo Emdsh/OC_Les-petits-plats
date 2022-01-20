@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+
 import filterFilters from './filterFilters.js';
 
 // filter recipes depending on the main search bar input
@@ -12,7 +14,7 @@ function search() {
       for (let g = 0; g < recipes.length; g += 1) {
         recipes[g].style.display = 'block';
       }
-    return filterFilters();
+      return filterFilters();
     }
     // start filtering once input is at least 3 letters
     // hide all recipes by default

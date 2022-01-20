@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+
 import filterFilters from './filterFilters.js';
 
 // filter recipes depending on the selected filters
