@@ -1,5 +1,6 @@
 import filterFilters from './filterFilters.js';
 
+// filter recipes depending on the main search bar input
 function search() {
   const searchBar = document.getElementById('search-bar');
 
@@ -12,14 +13,16 @@ function search() {
         return;
       }
 
+      // hide every recipes
       recipe.style.display = 'none';
 
+      // display recipes that match with the search bar
       if (recipe.innerText.toLowerCase().includes(searchBar.value.toLowerCase())) {
         recipe.style.display = 'block';
-        console.log(recipe.innerText);
       }
     });
 
+    // filter filters depending on the main search bar input
     filterFilters();
   });
 }

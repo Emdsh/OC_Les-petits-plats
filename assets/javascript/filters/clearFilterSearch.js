@@ -1,3 +1,4 @@
+// clear the input once the user focuses out of the search bar
 function clearFilterSearch() {
   const inputs = document.querySelectorAll('.selectors__item');
 

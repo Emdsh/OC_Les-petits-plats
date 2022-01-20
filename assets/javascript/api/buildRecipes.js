@@ -1,6 +1,7 @@
 import { Recipe } from '../utils/recipe.c.js';
 import getRecipes from './getRecipes.js';
 
+// build recipes array
 function buildRecipes() {
   const api = getRecipes();
   

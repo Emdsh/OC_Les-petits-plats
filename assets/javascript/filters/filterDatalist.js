@@ -1,3 +1,4 @@
+// filter datalist items depending on the search bar input
 function filterDatalist() {
   const inputs = document.querySelectorAll('.selectors__item');
   const datalists = Array.from(document.querySelectorAll('.datalist'));
@@ -15,7 +16,9 @@ function filterDatalist() {
 
       const text = input.value.toLowerCase();
       currentOptions.forEach(option => {
+        // hide every items
         option.style.display = 'none';
+        // display items that match the search bar input
         if (option.value.indexOf(text) > -1) {
           option.style.display = 'inline-block';
         }
