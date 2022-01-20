@@ -7,9 +7,9 @@ import fillHomepage from './pages/fillHomepage.js';
 import search from './search/search.js';
 
 // fetch recipes from the API and build an array
-const recipes = buildRecipes();
+const recipeArray = buildRecipes();
 
-recipes.then(recipes => {
+recipeArray.then((recipes) => {
   // populate homepage with recipes
   fillHomepage(recipes);
 

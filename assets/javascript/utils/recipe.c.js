@@ -1,3 +1,6 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable import/prefer-default-export */
+
 export class Recipe {
   constructor(recipe) {
     this._appliance = recipe.appliance;
@@ -21,10 +24,10 @@ export class Recipe {
   get ingredients() {
     const ingredientsArray = [];
 
-    this._ingredients.forEach(i => {
+    this._ingredients.forEach((i) => {
       ingredientsArray.push(i.ingredient);
     });
-    
+
     return ingredientsArray;
   }
 
@@ -32,16 +35,14 @@ export class Recipe {
   get ingredientsQuantity() {
     const ingredientsArray = [];
 
-    this._ingredients.forEach(i => {
+    this._ingredients.forEach((i) => {
       if (i.quantity) {
         if (i.unit) {
           ingredientsArray.push(`<b>${i.ingredient}:</b> ${i.quantity} ${i.unit}`);
-        }
-        else {
+        } else {
           ingredientsArray.push(`<b>${i.ingredient}:</b> ${i.quantity}`);
         }
-      }
-      else {
+      } else {
         ingredientsArray.push(`<b>${i.ingredient}</b>`);
       }
     });

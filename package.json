@@ -1,0 +1,27 @@
+{
+  "name": "les-petits-plats",
+  "version": "1.0.0",
+  "description": "Les petits plats est le sixième projet de la formation Développeur Front-End de OpenClassrooms: développez un algorithme de recherche en JavaScript",
+  "main": "index.js",
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmbitiousDev/OC_Les-petits-plats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmbitiousDev/OC_Les-petits-plats/issues"
+  },
+  "homepage": "https://github.com/EmbitiousDev/OC_Les-petits-plats#readme"
+}

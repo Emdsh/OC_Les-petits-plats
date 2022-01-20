@@ -7,7 +7,7 @@ function search() {
   searchBar.addEventListener('input', () => {
     const recipes = document.querySelectorAll('.recipe-tile');
 
-    recipes.forEach(recipe => {
+    recipes.forEach((recipe) => {
       if (searchBar.value.length < 3) {
         recipe.style.display = 'block';
         return;

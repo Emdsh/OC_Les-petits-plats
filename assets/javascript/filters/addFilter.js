@@ -1,3 +1,5 @@
+/* eslint-disable import/no-cycle */
+
 import filter from '../search/filter.js';
 import removeFilter from './removeFilter.js';
 
@@ -16,7 +18,7 @@ function addItem() {
 function addFilter() {
   const options = Array.from(document.querySelectorAll('.datalist option'));
 
-  options.forEach(option => {
+  options.forEach((option) => {
     option.removeEventListener('mousedown', addItem);
     option.addEventListener('mousedown', addItem);
   });

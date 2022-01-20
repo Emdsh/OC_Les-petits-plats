@@ -2,7 +2,7 @@
 function clearFilterSearch() {
   const inputs = document.querySelectorAll('.selectors__item');
 
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     input.addEventListener('focusout', () => {
       input.value = '';
     });
