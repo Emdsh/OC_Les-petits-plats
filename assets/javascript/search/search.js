@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 
+import error from './error.js';
 import filterFilters from './filterFilters.js';
 
 // filter recipes depending on the main search bar input
@@ -31,6 +32,8 @@ function search() {
 
     // filter filters depending on the main search bar input
     filterFilters();
+
+    error();
   });
 }
 
