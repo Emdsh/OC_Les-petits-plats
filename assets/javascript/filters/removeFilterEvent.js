@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 
 import filter from '../search/filter.js';
-import addFilter from './addFilter.js';
+import addFilterEvent from './addFilterEvent.js';
 
 // remove filters from below the search bar when clicked on
 function removeItem() {
@@ -9,14 +9,14 @@ function removeItem() {
   const datalist = document.getElementById(`${filterCategory}s-list`);
   // add the filter back in the datalist
   datalist.insertAdjacentHTML('beforeend', `<option value="${this.innerText.toLowerCase()}" class="${filterCategory}">${this.innerText.toLowerCase()}</option>`);
-  addFilter();
+  addFilterEvent();
   // remove the filter
   this.remove();
   // filter recipes depending on the selected filters
   filter();
 }
 
-function removeFilter() {
+function removeFilterEvent() {
   const filters = document.querySelectorAll('.filters__item');
 
   filters.forEach((filterItem) => {
@@ -25,4 +25,4 @@ function removeFilter() {
   });
 }
 
-export default removeFilter;
+export default removeFilterEvent;
