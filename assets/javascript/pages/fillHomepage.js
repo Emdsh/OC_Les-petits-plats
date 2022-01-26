@@ -1,16 +1,22 @@
-import fillAppliances from './fillAppliances.js';
-import fillIngredients from './fillIngredients.js';
-import fillUtensils from './fillUtensils.js';
-import generateHomepage from './generateHomepage.js';
+/* eslint-disable no-undef */
 
-// populate homepage with recipes
+// put recipes in the homepage
 function fillHomepage(recipes) {
-  // put recipes in the homepage
-  generateHomepage(recipes);
-  // fill the ingredients, appliances, and utensils datalists
-  fillIngredients(recipes);
-  fillAppliances(recipes);
-  fillUtensils(recipes);
+  const main = document.getElementById('main');
+
+  // build every recipe tile with Handlebars
+  fetch('assets/javascript/templates/recipeTile.hbs')
+    .then((response) => response.text())
+    .then((text) => Handlebars.compile(text))
+    .then((fn) => fn(recipes, {
+      allowedProtoProperties: {
+        name: true,
+        time: true,
+        ingredientsQuantity: true,
+        description: true,
+      },
+    }))
+    .then((html) => main.insertAdjacentHTML('beforeend', html));
 }
 
 export default fillHomepage;
