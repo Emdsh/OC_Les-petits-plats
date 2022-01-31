@@ -1,5 +1,6 @@
 import isPageEmpty from './isPageEmpty.js';
 
+// add error message if the page is empty
 function error() {
   const emptyPage = isPageEmpty();
   const main = document.getElementById('main');

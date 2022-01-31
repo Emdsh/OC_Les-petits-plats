@@ -6,6 +6,10 @@ import showDatalist from './filters/showDatalist.js';
 import generateHomepage from './pages/generateHomepage.js';
 import search from './search/search.js';
 
+function onSearchEvent() {
+  search();
+}
+
 // fetch recipes from the API and build an array
 const recipeArray = buildRecipes();
 
@@ -19,5 +23,6 @@ recipeArray.then((recipes) => {
   filterDatalist();
   addFilterEvent();
 
-  search();
+  const searchBar = document.getElementById('search-bar');
+  searchBar.addEventListener('input', onSearchEvent);
 });
